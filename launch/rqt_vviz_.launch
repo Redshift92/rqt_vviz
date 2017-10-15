@@ -1,0 +1,1 @@
+<launch><node name="rqt_vviz_0" pkg="rqt_vviz" type="rqt_vviz" output="screen"/><node name="rqt_vviz_1" pkg="rqt_vviz" type="rqt_vviz" output="screen"/></launch>

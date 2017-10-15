@@ -1,0 +1,24 @@
+#!/usr/bin/env python
+
+import os
+import rospy
+import rospkg
+import subprocess
+
+rospy.init_node('vviz_bootstrap')
+launch_file_name = 'rqt_vviz_.launch'
+launch_file = os.path.join(rospkg.RosPack().get_path('rqt_vviz'), 'launch', launch_file_name)
+n = rospy.get_param(rospy.get_name() + '/n')
+
+launch_str = '<launch>'
+if n == 1:
+    launch_str += '<node name="rqt_vviz" pkg="rqt_vviz" type="rqt_vviz" output="screen"/>'
+else:
+    for i in range(int(n)):
+        launch_str += '<node name="rqt_vviz_{}" pkg="rqt_vviz" type="rqt_vviz" output="screen"/>'.format(i)
+launch_str += '</launch>'
+
+with open(launch_file, 'w+') as ww:
+    ww.write(launch_str)
+
+subprocess.call('roslaunch rqt_vviz ' + launch_file_name, shell=True)

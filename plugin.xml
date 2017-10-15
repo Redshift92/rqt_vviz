@@ -1,0 +1,20 @@
+<library path="src">
+  <class name="VehiclesViz" type="rqt_vviz.rqt_vviz.VehiclesViz" base_class_type="rqt_gui_py::Plugin">
+    <description>
+      Nice Vehicles Visualizer
+    </description>
+    <qtgui>
+      <!-- optional grouping...
+      <group>
+        <label>Group</label>
+      </group>
+      <group>
+        <label>Subgroup</label>
+      </group>
+      -->
+      <label>VehiclesViz</label>
+      <icon type="theme">system-help</icon>
+      <statustip>Great user interface to provide real value.</statustip>
+    </qtgui>
+  </class>
+</library>
