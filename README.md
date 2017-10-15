@@ -3,7 +3,7 @@ rqt_vviz
 
 ROS rqt plugin to visualize 2D vehicles.
 
-![2D vehicles on the road](https://raw.githubusercontent.com/Redshift92/rqt_vviz/master/screens/vviz.gif)
+![2D vehicles on the road](https://raw.githubusercontent.com/Redshift92/rqt_vviz/master/resource/screens/vviz.gif)
 
 ### Usage:
 
